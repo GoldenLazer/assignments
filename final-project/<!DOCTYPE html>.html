@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal portfolio of Andres Pineda" />
+  <meta name="keywords" content="portfolio, web development, student" />
+  <meta name="author" content="Andres Pineda" />
+  <title>Andres Pineda - Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+  <!-- External Stylesheets -->
+  <link rel="stylesheet" href="ai-2.css" />
+  <link rel="stylesheet" href="calculator.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Andres Pineda</h1>
+    <a href="https://www.linkedin.com/in/apineda20/" target="_blank">LinkedIn Profile</a>
+    <br />
+    <img src="Andres.jpg" alt="Profile Picture" width="150" height="200" />
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hi, this is my website.</p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li>San Francisco State University - B.S Computer Science (2025)</li>
+      </ul>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <table>
+        <tr>
+          <th>Role</th>
+          <th>Company</th>
+          <th>Duration</th>
+        </tr>
+        <tr>
+          <td>Sales Consultant</td>
+          <td>CarMax</td>
+          <td>October 2023 - June 2024</td>
+        </tr>
+        <tr>
+          <td>Life Guard</td>
+          <td>Wild Rivers</td>
+          <td>May 2021 - August 2023</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <article class="project-tile" onclick="toggleCalculator()">
+        <h3>JavaScript Calculator Project</h3>
+        <p>Click to open calculator</p>
+      </article>
+
+      <div id="calculatorContainer">
+        <div class="calculator">
+          <div class="display" id="display">0</div>
+          <div class="buttons">
+            <button class="btn gray" id="clear">AC</button>
+            <button class="btn gray" id="plus-minus">+/-</button>
+            <button class="btn gray" id="percent">%</button>
+            <button class="btn orange" data-operator="/">÷</button>
+
+            <button class="btn dark" data-number="7">7</button>
+            <button class="btn dark" data-number="8">8</button>
+            <button class="btn dark" data-number="9">9</button>
+            <button class="btn orange" data-operator="*">×</button>
+
+            <button class="btn dark" data-number="4">4</button>
+            <button class="btn dark" data-number="5">5</button>
+            <button class="btn dark" data-number="6">6</button>
+            <button class="btn orange" data-operator="-">−</button>
+
+            <button class="btn dark" data-number="1">1</button>
+            <button class="btn dark" data-number="2">2</button>
+            <button class="btn dark" data-number="3">3</button>
+            <button class="btn orange" data-operator="+">+</button>
+
+            <button class="btn dark wide" data-number="0">0</button>
+            <button class="btn dark" data-number=".">.</button>
+            <button class="btn orange" id="equals">=</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Andres Pineda &bull; All rights reserved</p>
+  </footer>
+
+  <script src="calculator.js"></script>
+  <script>
+    function toggleCalculator() {
+      const calc = document.getElementById("calculatorContainer");
+      calc.style.display = calc.style.display === "none" || calc.style.display === "" ? "block" : "none";
+    }
+  </script>
+</body>
+</html>
